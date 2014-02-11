@@ -3,7 +3,8 @@ title: Hey there errybody
 ---
 !!!
 %html
-  %head
-    %title {{ page.title }}
+  {% include head.haml %}
   %body
-    %h1 Hello World
+    {% include header.haml %}
+    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, odio, voluptatem, repellat nostrum voluptatibus quibusdam nihil explicabo hic unde molestias delectus voluptas eius eum totam maiores saepe ducimus minima similique.
+  {% include footer.haml %}
