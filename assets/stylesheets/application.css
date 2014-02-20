@@ -1,0 +1,6 @@
+@import url(reset.css);
+@import url(typography.css);
+/* line 5, /Users/davidjohnson/www/davidjohnson91.github.io/assets/stylesheets/application.scss */
+html {
+  background: #2a6393;
+}
