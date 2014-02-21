@@ -3,47 +3,54 @@
   <head>
     <head>
   <title>Object-Oriented CSS: Buttons</title>
-  <link rel="stylesheet" href="/assets/application-7dc06dfe2063405555dc32f0bd410448.css">
+  <link rel="stylesheet" href="/assets/application-ad72459481de85bbd87dfa0c4bbcf83a.css">
 </head>
 
   </head>
   <body>
     <div class='wrapper'>
-      <div class='row'>
-  <div class='col large-12 medium-12 small-12'>
-    <h1>DavidJohnson.me</h1>
+      <header class='row'>
+  <nav class='row'>
+    <ul class='navigation'>
+      <a href='/'>Home</a>
+      <a href='/blog'>Blog</a>
+      <a href='/contact'>Contact</a>
+    </ul>
+  </nav>
+  <div class='row'>
+    <div class='col large-12 medium-12 small-12'>
+      <h1>DavidJohnson.me</h1>
+    </div>
   </div>
-</div>
+</header>
 
-      <p>Object-oriented CSS is an important skill and way to think when writing the class structure for websites today. The idea behind object-oriented CSS is to write basic styles that work in conjunction with each other to form the styles behind a single element. The best practice is to identify elements that are used throughout a website like news articles, inputs, or other elements and then apply unifying classes so that you can style them once and apply it throughout the project.</p>
+      <article class='blog-post col large-10 medium-10 small-12 large-push-1 medium-push-1'>
+        <h1>Object-Oriented CSS: Buttons</h1>
+        <p>Object-oriented CSS is an important skill and way to think when writing the class structure for websites today. The idea behind object-oriented CSS is to write basic styles that work in conjunction with each other to form the styles behind a single element. The best practice is to identify elements that are used throughout a website like news articles, inputs, or other elements and then apply unifying classes so that you can style them once and apply it throughout the project.</p>
 
 <p>Buttons have been a fixture of web pages since the early days of the web. As website designers focus on usability more and more, buttons are both becoming nicer looking and more prevalent. Because they are being used more and more, and users are expecting even simple anchor tags to be styled like them, buttons are a perfect use-case to practice object-oriented CSS.</p>
 
-<p>The look of many HTML elements, especially form elements, is based on both the operating system and browser of the user. We’ll be starting today’s quick tip with some normalized CSS in order to set some consistencies in browsers.</p>
+<p>The look of many HTML elements, especially form elements, is based on both the operating system and browser of the user. We&#39;ll be starting today&#39;s quick tip with some normalized CSS in order to set some consistencies in browsers.</p>
 
 <p><img src="/assets/images/blog/oocss/buttons/default.png" alt="The default look of buttons in Mac OS X" /></p>
 
-<p>Since we want to be able to style both real submits and regular anchor links, but we don’t want to style every link like a button, we’ll set up a button class to target all elements which should look like the button we’re creating. This button class should have all of the basic parts of a button, it might look something like the following code:</p>
-
-<pre><code>&lt;!-- HTML --&gt;
-&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;I&#39;m an anchor&lt;/a&gt;
-&lt;input type=&quot;submit&quot; class=&quot;button&quot; value=&quot;I&#39;m a button&quot; /&gt;
-
-&lt;!-- CSS --&gt;
-.button{
-  padding: 5px 10px;
-  margin: 10px;
-  display: inline-block;
-  text-decoration: none;
-  background: #b8c6df;
-  color: #fff;
-  box-shadow: 0 1px rgba(255,255,255,.4) inset;
-  text-shadow: 0 -1px rgba(0,0,0, .3);
-  border: 1px solid #8f9aad;
-  border-radius: 3px;
-}</code></pre>
-
-<p>There are some very important part of the preceding style which are necessary to pulling the look off, the first of which is “display: inline-block.” This allows the elements to take space like they were block level, but also flow like they are inline.</p>
+<p>Since we want to be able to style both real submits and regular anchor links, but we don&#39;t want to style every link like a button, we&#39;ll set up a button class to target all elements which should look like the button we&#39;re creating. This button class should have all of the basic parts of a button, it might look something like the following code:</p>
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;a</span> <span class='na'>href=</span><span class='s'>&quot;#&quot;</span> <span class='na'>class=</span><span class='s'>&quot;button&quot;</span><span class='nt'>&gt;</span>I&#39;m an anchor<span class='nt'>&lt;/a&gt;</span>
+<span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;submit&quot;</span> <span class='na'>class=</span><span class='s'>&quot;button&quot;</span> <span class='na'>value=</span><span class='s'>&quot;I&#39;m a button&quot;</span> <span class='nt'>/&gt;</span>
+</code></pre></div><div class='highlight'><pre><code class='css'><span class='nc'>.button</span><span class='p'>{</span>
+  <span class='k'>padding</span><span class='o'>:</span> <span class='m'>5px</span> <span class='m'>10px</span><span class='p'>;</span>
+  <span class='k'>margin</span><span class='o'>:</span> <span class='m'>10px</span><span class='p'>;</span>
+  <span class='k'>display</span><span class='o'>:</span> <span class='k'>inline</span><span class='o'>-</span><span class='k'>block</span><span class='p'>;</span>
+  <span class='k'>text-decoration</span><span class='o'>:</span> <span class='k'>none</span><span class='p'>;</span>
+  <span class='k'>background</span><span class='o'>:</span> <span class='m'>#b8c6df</span><span class='p'>;</span>
+  <span class='k'>color</span><span class='o'>:</span> <span class='m'>#fff</span><span class='p'>;</span>
+  <span class='n'>box</span><span class='o'>-</span><span class='n'>shadow</span><span class='o'>:</span> <span class='m'>0</span> <span class='m'>1px</span> <span class='n'>rgba</span><span class='p'>(</span><span class='m'>255</span><span class='o'>,</span><span class='m'>255</span><span class='o'>,</span><span class='m'>255</span><span class='o'>,.</span><span class='m'>4</span><span class='p'>)</span> <span class='k'>inset</span><span class='p'>;</span>
+  <span class='k'>text-shadow</span><span class='o'>:</span> <span class='m'>0</span> <span class='m'>-1px</span> <span class='n'>rgba</span><span class='p'>(</span><span class='m'>0</span><span class='o'>,</span><span class='m'>0</span><span class='o'>,</span><span class='m'>0</span><span class='o'>,</span> <span class='o'>.</span><span class='m'>3</span><span class='p'>);</span>
+  <span class='k'>border</span><span class='o'>:</span> <span class='m'>1px</span> <span class='k'>solid</span> <span class='m'>#8f9aad</span><span class='p'>;</span>
+  <span class='k'>border</span><span class='o'>-</span><span class='n'>radius</span><span class='o'>:</span> <span class='m'>3px</span><span class='p'>;</span>
+<span class='p'>}</span>
+</code></pre></div>
+<p>There are some very important part of the preceding style which are necessary to pulling the look off, the first of which is &quot;display: inline-block.&quot; This allows the elements to take space like they were block level, but also flow like they are inline.</p>
 
 <p>You may also notice that the box-shadow and text-shadow properties are set as RGBA values. Setting them this way allows us to change the background color and not need to recalculate the values. This will be extremely important in a minute.</p>
 
@@ -52,34 +59,27 @@
 <p><img src="/assets/images/blog/oocss/buttons/styled.png" alt="How the buttons look with the style applied" /></p>
 
 <p>Now this is where the real power of object-oriented CSS comes in. Say we come across a reason to have a red button on the website? Now we need to copy all of the styles to a new selector right? Nope! With the addition of a single class, we can have another great looking button.</p>
-
-<pre><code>&lt;!-- HTML --&gt;
-&lt;a href=&quot;#&quot; class=&quot;button red&quot;&gt;I&#39;m a button&lt;/a&gt;
-
-&lt;!-- CSS --&gt;
-.button.red{
-  background: #c00;
-  border: 1px solid #a00;
-}</code></pre>
-
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;a</span> <span class='na'>href=</span><span class='s'>&quot;#&quot;</span> <span class='na'>class=</span><span class='s'>&quot;button red&quot;</span><span class='nt'>&gt;</span>I&#39;m a button<span class='nt'>&lt;/a&gt;</span>
+</code></pre></div><div class='highlight'><pre><code class='css'><span class='nc'>.button.red</span><span class='p'>{</span>
+  <span class='k'>background</span><span class='o'>:</span> <span class='m'>#c00</span><span class='p'>;</span>
+  <span class='k'>border</span><span class='o'>:</span> <span class='m'>1px</span> <span class='k'>solid</span> <span class='m'>#a00</span><span class='p'>;</span>
+<span class='p'>}</span>
+</code></pre></div>
 <p><img src="/assets/images/blog/oocss/buttons/red.png" alt="The red button looks fine with only a few extra lines of code" /></p>
 
-<p>You’re probably already thinking about ways which you can use the power of object-oriented CSS to its full potential. I’ll leave you with one last example: a pill-shaped button.</p>
-
-<pre><code>&lt;!-- HTML --&gt;
-&lt;a href=&quot;#&quot; class=&quot;button red pill&quot;&gt;I&#39;m a button&lt;/a&gt;
-
-&lt;!-- CSS --&gt;
-.button.pill{
-  border-radius: 1000px;
-}</code></pre>
-
+<p>You&#39;re probably already thinking about ways which you can use the power of object-oriented CSS to its full potential. I&#39;ll leave you with one last example: a pill-shaped button.</p>
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;a</span> <span class='na'>href=</span><span class='s'>&quot;#&quot;</span> <span class='na'>class=</span><span class='s'>&quot;button red pill&quot;</span><span class='nt'>&gt;</span>I&#39;m a button<span class='nt'>&lt;/a&gt;</span>
+</code></pre></div><div class='highlight'><pre><code class='css'><span class='nc'>.button.pill</span><span class='p'>{</span>
+  <span class='k'>border</span><span class='o'>-</span><span class='n'>radius</span><span class='o'>:</span> <span class='m'>1000px</span><span class='p'>;</span>
+<span class='p'>}</span>
+</code></pre></div>
 <p><img src="/assets/images/blog/oocss/buttons/pill.png" alt="Another few lines, and we get the popular pill-shaped button" /></p>
 
 <p>As you can see, going about CSS in an object-oriented manner can make your code much more streamlined by combining common snippets under unifying classes. Unifying classes can save download times, increase ease of maintenance, and help keep consistent styling across your entire website. Be sure to write me with any questions or if you have some great examples of object-oriented CSS.</p>
 
-<p>All code from today’s quick tip can be found at <a href="http://codepen.io/davidjohnson91/pen/dLAar">CodePen.io</a>.</p>
-      <div class='row'>
+<p>All code from today&#39;s quick tip can be found at <a href="http://codepen.io/davidjohnson91/pen/dLAar">CodePen.io</a>.</p>
+      </article>
+      <footer class='row'>
   <div class='col large-12 medium-12 small-12'>
     <small>
       <a href='/'>
@@ -87,7 +87,7 @@
       </a>
     </small>
   </div>
-</div>
+</footer>
 
     </div>
   </body>
