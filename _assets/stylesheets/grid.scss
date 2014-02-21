@@ -1,3 +1,95 @@
-html{
+$gutter-size: 20px;
 
+* { @include box-sizing(border-box) }
+
+.row{
+  @include clearfix;
+}
+
+.col{
+  float: left;
+  padding-left: $gutter-size/2;
+  padding-right: $gutter-size/2;
+  margin-left: 0;
+  margin-right: 0;
+  @include clearfix;
+  &.tight{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &.wide{
+    padding-left: $gutter-size;
+    padding-right: $gutter-size;
+  }
+}
+
+.wrapper{
+  min-width: 700px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $gutter_size/2;
+  position: relative;
+  padding: 0 20px;
+}
+
+
+@mixin grid-size($size) {
+  @for $i from 1 through 12{
+    .#{$size}-#{$i}{
+      width: percentage($i/12);
+      position: relative;
+      @if($size == 12){
+        float: none;
+      };
+    }
+
+    .#{$size}-#{$i}-fixed{
+      @if($size == "small"){
+        width: 400px/12*$i;
+      }@else if($size == "medium"){
+        width: 960px/12*$i;
+      } @else if($size == "large"){
+        width: 1200px/12*$i;
+      }
+    }
+
+    .#{$size}-push-#{$i}{
+      margin-left: percentage($i/12);
+    }
+    .#{$size}-push-#{$i}-fixed{
+      @if($size == "small"){
+        margin-left: 400px/12*$i;
+      }@else if($size == "medium"){
+        margin-left: 960px/12*$i;
+      } @else if($size == "large"){
+        margin-left: 1200px/12*$i;
+      }
+    }
+    .#{$size}-pull-#{$i}{
+      margin-right: percentage($i/12);
+    }
+    .#{$size}-pull-#{$i}-fixed{
+      @if($size == "small"){
+        margin-right: 400px/12*$i;
+      }@else if($size == "medium"){
+        margin-right: 960px/12*$i;
+      } @else if($size == "large"){
+        margin-right: 1200px/12*$i;
+      }
+    }
+
+  }
+
+  .#{$size}-remaining {
+    float: none;
+    overflow: hidden; //prevent issues from content not clearing correctly because of sibling columns
+
+  }
+
+  .#{$size}-last{
+    float: right !important;
+    right: 0;
+    @include clearfix;
+  }
 }

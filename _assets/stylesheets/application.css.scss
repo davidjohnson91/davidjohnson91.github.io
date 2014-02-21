@@ -6,3 +6,51 @@
 html{
   background: #2a6393;
 }
+
+img{
+  width: 100%;
+}
+
+// Media Queries
+$small_cutoff: 700px;
+$large_cutoff: 1100px;
+
+$large_query: "only screen and (min-width: #{$large_cutoff})";
+$medium_query: "only screen and (max-width: #{$large_cutoff})";
+$small_query: "only screen and (max-width: #{$small_cutoff})";
+
+/*LARGE screens*/
+@media  #{$large_query} {
+  $size: 'large';
+  @include grid-size($size);
+}
+
+/*MEDIUM screens*/
+@media #{$medium_query} {
+  $size: 'medium';
+  @include grid-size($size);
+}
+
+// SMALL screens
+@media #{$small_query} {
+  $size: 'small'; //This should be small should we ever target mobile
+  @include grid-size($size);
+  ul.horizontal.submit-list{
+    margin-bottom: 20px;
+    li{
+      &:before{
+        margin: 2px 0;
+      }
+      &:last-child{
+        .btn{
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .btn{
+      display: block;
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+}
