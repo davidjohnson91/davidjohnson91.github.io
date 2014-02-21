@@ -4,6 +4,7 @@ $gutter-size: 20px;
 
 .row{
   @include clearfix;
+  clear: both;
 }
 
 .col{

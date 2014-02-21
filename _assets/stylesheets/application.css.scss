@@ -2,13 +2,17 @@
 @import "bourbon";
 @import "grid";
 @import "typography";
+@import "syntax";
+@import "header";
+@import "footer";
 
 html{
-  background: #2a6393;
+  background: #FFFBF1;
 }
 
 img{
   width: 100%;
+  margin-bottom: 1em;
 }
 
 // Media Queries

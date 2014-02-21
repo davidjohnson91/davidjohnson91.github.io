@@ -1,0 +1,11 @@
+---
+layout: default
+title: You found me!
+---
+
+%ul.posts
+  {% for post in site.posts %}
+  %li
+    %a{:href => "{{ post.url }}"}
+      {{post.title}}
+  {% endfor %}
