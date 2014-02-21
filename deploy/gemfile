@@ -1,8 +1,0 @@
-source "http://rubygems.org"
-
-gem "jekyll"
-gem "jekyll-haml"
-gem 'jekyll-assets', git: "git@github.com:davidjohnson91/jekyll-assets.git"
-gem "uglifier"
-gem "sass"
-gem "bourbon"
