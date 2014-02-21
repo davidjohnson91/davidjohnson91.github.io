@@ -15,14 +15,6 @@ img{
   margin-bottom: 1em;
 }
 
-// Media Queries
-$small_cutoff: 700px;
-$large_cutoff: 1100px;
-
-$large_query: "only screen and (min-width: #{$large_cutoff})";
-$medium_query: "only screen and (max-width: #{$large_cutoff})";
-$small_query: "only screen and (max-width: #{$small_cutoff})";
-
 /*LARGE screens*/
 @media  #{$large_query} {
   $size: 'large';

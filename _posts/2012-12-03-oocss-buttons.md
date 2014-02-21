@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Object-Oriented CSS: Buttons"
+categories:
+  - css
+  - html
 ---
 
 Object-oriented CSS is an important skill and way to think when writing the class structure for websites today. The idea behind object-oriented CSS is to write basic styles that work in conjunction with each other to form the styles behind a single element. The best practice is to identify elements that are used throughout a website like news articles, inputs, or other elements and then apply unifying classes so that you can style them once and apply it throughout the project.

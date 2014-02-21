@@ -8,4 +8,9 @@
       %article.blog-post.col.large-10.medium-10.small-12.large-push-1.medium-push-1
         %h1 {{ page.title }}
         {{ content }}
+
+        %ul
+          {% for category in page.categories %}
+          %li {{ category }}
+          {% endfor %}
       = "{% haml footer.haml %}"
