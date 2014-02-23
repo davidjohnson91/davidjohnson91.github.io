@@ -1,19 +1,12 @@
 @import "reset";
 @import "bourbon";
+@import "base";
 @import "grid";
 @import "typography";
 @import "syntax";
 @import "header";
+@import "navigation";
 @import "footer";
-
-html{
-  background: #FFFBF1;
-}
-
-img{
-  width: 100%;
-  margin-bottom: 1em;
-}
 
 /*LARGE screens*/
 @media  #{$large_query} {
@@ -29,24 +22,6 @@ img{
 
 // SMALL screens
 @media #{$small_query} {
-  $size: 'small'; //This should be small should we ever target mobile
+  $size: 'small';
   @include grid-size($size);
-  ul.horizontal.submit-list{
-    margin-bottom: 20px;
-    li{
-      &:before{
-        margin: 2px 0;
-      }
-      &:last-child{
-        .btn{
-          margin-bottom: 20px;
-        }
-      }
-    }
-    .btn{
-      display: block;
-      width: 100%;
-      margin-bottom: 0;
-    }
-  }
 }
