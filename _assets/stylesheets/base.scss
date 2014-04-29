@@ -2,6 +2,10 @@ $orange: #FF4B00;
 $blue: #08f;
 $blue_dk: darken($blue, 10%);
 
+.clearfix{
+  @include clearfix;
+}
+
 .reset{
   margin: 0;
   padding: 0;

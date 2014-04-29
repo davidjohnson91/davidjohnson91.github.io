@@ -12,8 +12,9 @@ html{
 
 h1,h2,h3,h4,h5,h6{
   font-size: 2em;
+  line-height: 1;
   font-weight: 300;
-  margin: 0 0 .67em;
+  margin: 0 0 .35em;
   padding: 0;
 }
 
@@ -28,4 +29,8 @@ a{
     color: $blue_dk;
     text-decoration: underline;
   }
+}
+
+.collection{
+  margin-bottom: 1em;
 }
