@@ -1,0 +1,41 @@
+.icon{
+  position: relative;
+  display: inline-block;
+
+  &::before,
+  &::after{
+    font-family: icons;
+    vertical-align: middle;
+    display: inline-block;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    font-smooth: always;
+    padding-right: 5px;
+  }
+
+  &::after{
+    display: none;
+  }
+
+
+  &.github{
+    &::before,
+    &::after{
+      content: "\e602";
+    }
+  }
+
+  &.instagram{
+    &::before,
+    &::after{
+      content: "\e600";
+    }
+  }
+
+  &.twitter{
+    &::before,
+    &::after{
+      content: "\e601";
+    }
+  }
+}
