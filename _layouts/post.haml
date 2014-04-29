@@ -3,8 +3,8 @@
   %head
     = "{% haml head.haml %}"
   %body
+    = "{% haml header.haml %}"
     .wrapper
-      = "{% haml header.haml %}"
       %article.blog-post.col.large-10.medium-10.small-12.large-push-1.medium-push-1
         %h1 {{ page.title }}
         {{ content }}

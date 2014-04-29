@@ -1,5 +1,5 @@
 $serif: Georgia;
-$sans-serif: sans-serif;
+$sans-serif: helvetica neue, sans-serif;
 
 html{
   font: 300 15px/1.2 $sans-serif;
@@ -17,4 +17,12 @@ h1,h2,h3,h4,h5,h6{
 
 .blog-post{
   font: 1.3em/1.5 $serif;
+}
+
+a{
+  color: $blue;
+  &:hover{
+    color: $blue_dk;
+    text-decoration: underline;
+  }
 }
