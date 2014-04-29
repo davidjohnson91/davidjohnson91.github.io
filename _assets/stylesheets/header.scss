@@ -1,0 +1,41 @@
+header.site-wide{
+  background: $orange;
+  color: #fff;
+  text-shadow: none;
+  text-align: center;
+  box-shadow: 0px -10px 20px -10px darken($orange, 20%) inset;
+  border-bottom: 1px solid #fff;
+  padding: 2em 0;
+
+  h1{
+    font: 40px/1.2 $sans-serif;
+    margin: 0 .5em;
+    text-transform: uppercase;
+    margin-bottom: .25em;
+
+    small{
+      display: block;
+      font-size: 50%;
+      font-weight: lighter;
+      text-transform: lowercase;
+    }
+  }
+
+  a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: lowercase;
+  }
+
+  @media #{$small_query} {
+    & {
+      text-align: center;
+      line-height: 1.2;
+
+      .navigation{
+        text-align: center;
+      }
+    }
+  }
+}
+
