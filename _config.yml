@@ -2,3 +2,6 @@ assets:
   js_compressor:  uglifier
   css_compressor: sass
 permalink: /blog/:year/:month/:day/:title
+
+paginate: 5
+paginate_path: "blog/:num"
